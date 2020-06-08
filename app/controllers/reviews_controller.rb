@@ -10,26 +10,32 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    @review = Review.create(review_params)
+    @review = Review.create!(review_params)
     json_response(@review)
   end
 
   def update
     @review = Review.find(params[:id])
-    @review.update(review_params)
+    if @review.update!(review_params)
+      render status: 200, json: {
+        message: "This quote has been successfully updated."
+      }
+    end
   end
 
   def destroy
     @review = Review.find(params[:id])
-    @review.destroy
+    if @review.destroy
+      render status: 200, json: {
+        message: "This quote has been successfully deleted."
+      }
+    end
   end
 
   private 
-  def json_response(object, status = :ok)
-    render json: object, status: status
-  end
 
   def review_params
     params.permit(:author, :content, :place)
   end
+
 end
