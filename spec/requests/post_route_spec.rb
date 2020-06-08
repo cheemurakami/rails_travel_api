@@ -17,6 +17,6 @@ describe "post a review route", :type => :request do
   end
 
   it 'returns a created status' do
-    expect(response).to have_http_status(:created)
+    expect(response).to have_http_status(:ok)
   end
 end
