@@ -24,9 +24,9 @@ gem 'puma', '~> 3.11'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
-gem 'jquery-rails'
-gem 'bootstrap-sass', '~> 3.4.1'
-gem 'sassc-rails', '>= 2.1.0'
+# gem 'jquery-rails'
+# gem 'bootstrap-sass', '~> 3.4.1'
+# gem 'sassc-rails', '>= 2.1.0'
 gem 'faker'
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
