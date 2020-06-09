@@ -1,12 +1,12 @@
 require 'rails_helper'
 
 describe "get all reviews route", :type => :request do 
-  let!(:reviews) {FactoryBot.create_list(:review, 20)}
+  let!(:reviews) {FactoryBot.create_list(:review, 10)}
 
     before {get'/api/v1/reviews'}
 
     it 'returns all reviews' do 
-      expect(JSON.parse(response.body).size).to eq(20)
+      expect(JSON.parse(response.body).size).to eq(10)
     end
 
     it 'returns status code 200' do

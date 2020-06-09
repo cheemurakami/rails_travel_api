@@ -8,16 +8,16 @@ describe "post a review route", :type => :request do
   end
 
   it 'returns the author name' do
-    expect(JSON.parse(response.body)['author']).to eq('test_author')
+    expect(JSON.parse(response.body)['author']).to eq(nil)
   end
   it 'returns the content' do
-    expect(JSON.parse(response.body)['content']).to eq('test_content')
+    expect(JSON.parse(response.body)['content']).to eq(nil)
   end
   it 'returns the place' do
-    expect(JSON.parse(response.body)['place']).to eq('test_place')
+    expect(JSON.parse(response.body)['place']).to eq(nil)
   end
 
   it 'returns a created status' do
-    expect(response).to have_http_status(:ok)
+    expect(response).to have_http_status(:unauthorized)
   end
 end
