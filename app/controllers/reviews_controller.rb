@@ -1,4 +1,7 @@
 class ReviewsController < ApplicationController
+before_action :authenticate_user!, :only => [:destroy, :create, :update]
+
+
   def index
     @reviews = Review.all
     json_response(@reviews)
