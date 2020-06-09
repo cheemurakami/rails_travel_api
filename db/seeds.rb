@@ -6,7 +6,7 @@ class Seed
   end
 
   def generate_reviews
-    20.times do |i|
+    200.times do |i|
       review  = Review.create!(
         content: Faker::Hipster.paragraph(sentence_count: 2),
         author: Faker::FunnyName.name,

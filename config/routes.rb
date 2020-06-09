@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   end
 
   resources :reviews
-  root to: 'reviews#index'
+  root to: 'api/v1/reviews#index'
 end
