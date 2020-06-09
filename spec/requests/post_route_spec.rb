@@ -1,9 +1,10 @@
 require 'rails_helper'
 
+
 describe "post a review route", :type => :request do
   
-  before do 
-    post '/reviews', params: { :author => 'test_author', :content => 'test_content', :place => 'test_place' }
+  before do
+    post '/api/v1/reviews', params: { :author => 'test_author', :content => 'test_content', :place => 'test_place' }
   end
 
   it 'returns the author name' do
