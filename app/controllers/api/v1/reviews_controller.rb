@@ -15,7 +15,7 @@ module Api
     
       def create
         @review = Review.create!(review_params)
-        json_response(@review)
+        json_response(@review, :created)
       end
     
       def update
