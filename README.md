@@ -21,4 +21,6 @@ Things you may want to cover:
 
 * Deployment instructions
 
+* Heroku https://travel-api-rails.herokuapp.com/
+
 * ...
