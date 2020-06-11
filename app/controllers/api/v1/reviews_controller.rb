@@ -4,7 +4,8 @@ module Api
     before_action :authenticate_user!, :only => [:destroy, :create, :update]
     
       def index
-        @reviews = Review.page(params[:page]).per(10)
+        @reviews = Review.all
+        # @reviews = Review.page(params[:page]).per(10)
         json_response(@reviews)
       end
     
